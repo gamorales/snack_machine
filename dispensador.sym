@@ -1,0 +1,175 @@
+004     @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+008     lcdlat
+008     PSP_DATA
+008     lcd
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020-02E msg1
+02F-039 msg2
+03A-049 pro1
+04A-059 pro2
+05A-069 pro3
+06A-06D dinero
+06E-071 vueltos
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+088     lcdtris
+09C.6   C1OUT
+09C.7   C2OUT
+0A0-0AF pro4
+0B0     MAIN.car
+0B1     validarDinero.mostrar
+0B1     pagarProducto.producto
+0B1     lcd_init.i
+0B1     MAIN.@SCRATCH1
+0B2-0B5 pagarProducto.precio
+0B2     lcd_init.@SCRATCH1
+0B6-0B7 mostrarMensaje.fila1
+0B6-0B9 @ADDFF.P1
+0B6-0B9 @FLT.P2
+0B6     pagarProducto.@SCRATCH1
+0B8-0BB mostrarMensaje.fila2
+0BA-0BD @ADDFF.P1
+0BA-0BD @FLT.P2
+0BC     @PSTRINGCN7_93.P1
+0BC-0BF @PRINTF_L32D_93FPFPF.P2
+0BC     @PSTRINGC7_93.@SCRATCH1
+0BC     @PSTRINGR_93.@SCRATCH1
+0BD     @PSTRINGC7_93.@SCRATCH2
+0BD     @PSTRINGR_93.@SCRATCH2
+0BD     @PSTRINGCN7_93.@SCRATCH1
+0BE     @PSTRINGC7_93.@SCRATCH3
+0BE     @ADDFF.@SCRATCH1
+0BE     @PSTRINGCN7_93.@SCRATCH2
+0BE     @FLT.@SCRATCH1
+0BF     @ADDFF.@SCRATCH2
+0BF     @PSTRINGCN7_93.@SCRATCH3
+0BF     @FLT.@SCRATCH2
+0C0     @PRINTF_L32D_93FPFPF.P1
+0C0     @ADDFF.@SCRATCH3
+0C1     @ADDFF.@SCRATCH4
+0C1     @PRINTF_L32D_93FPFPF.@SCRATCH1
+0C2     @ADDFF.@SCRATCH5
+0C2     @PRINTF_L32D_93FPFPF.@SCRATCH2
+0C3     @ADDFF.@SCRATCH6
+0C3     @PRINTF_L32D_93FPFPF.@SCRATCH3
+0C4     @ADDFF.@SCRATCH7
+0C4     @PRINTF_L32D_93FPFPF.@SCRATCH4
+0C5     @ADDFF.@SCRATCH8
+0C5     @PRINTF_L32D_93FPFPF.@SCRATCH5
+0C6     @PRINTF_L32D_93FPFPF.@SCRATCH6
+0C7     @PRINTF_L32D_93FPFPF.@SCRATCH7
+0C8     @PRINTF_L32D_93FPFPF.@SCRATCH8
+0C9-0CC @FTOSD.P1
+0C9-0CC @DIV3232.P2
+0C9     lcd_putc.c
+0C9-0CC @MULFF.P1
+0CA     lcd_gotoxy.x
+0CA     @delay_ms1.P1
+0CB     lcd_gotoxy.y
+0CC     lcd_gotoxy.address
+0CD-0D0 @MULFF.P1
+0CD-0D0 @DIV3232.P2
+0CD     lcd_gotoxy.@SCRATCH1
+0CD     @FTOSD.@SCRATCH1
+0CE     lcd_send_byte.address
+0CF     lcd_send_byte.n
+0D0     lcd_read_byte.low
+0D0     lcd_send_byte.@SCRATCH1
+0D1     lcd_read_byte.high
+0D1     lcd_send_nibble.n
+0D1     @MULFF.@SCRATCH1
+0D1     @DIV3232.@SCRATCH1
+0D2     lcd_read_byte.@SCRATCH1
+0D2     @MULFF.@SCRATCH2
+0D2     @DIV3232.@SCRATCH2
+0D3     @MULFF.@SCRATCH3
+0D3     @DIV3232.@SCRATCH3
+0D4     @MULFF.@SCRATCH4
+0D4     @DIV3232.@SCRATCH4
+0D5     @MULFF.@SCRATCH5
+0D5     @DIV3232.@SCRATCH5
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+004A  @delay_ms1
+0004  LCD_INIT_STRING
+0074  lcd_read_byte
+006D  lcd_read_nibble
+005F  lcd_send_nibble
+0073  lcd_send_byte
+00BE  lcd_init
+013D  lcd_gotoxy
+0151  lcd_putc
+0800  MAIN
+000C  @const118
+0182  @PSTRINGC7_93
+0015  @const120
+0483  @ADDFF
+001E  @const124
+03F0  mostrarMensaje
+001F  @const125
+0225  @PSTRINGR_93
+0020  @const127
+0416  @PSTRINGCN7_93
+029B  @MULFF
+0321  @FTOSD
+0242  @DIV3232
+0286  @PRINTF_L32D_93FPFPF
+05C9  pagarProducto
+00FC  @FLT
+0025  @const144
+0026  @const145
+002D  @const146
+0036  @const147
+0037  @const148
+069E  @goto10344
+01DC  validarDinero
+003D  @const150
+003E  @const151
+0046  @const152
+0800  @cinit
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    C:\Users\Usuario\Documents\ccs\dispensador_bebidas\
+
+Project Files:
+    dispensador.c
+    ..\..\..\..\..\Program Files (x86)\PICC\devices\16f877a.h
+    ..\..\..\..\..\Program Files (x86)\PICC\drivers\lcd.c
+
+Units:
+    C:\Users\Usuario\Documents\ccs\dispensador_bebidas\dispensador (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      dispensador.err
+    Ext Symbols: dispensador.esym
+    INHX8:       dispensador.hex
+    Symbols:     dispensador.sym
+    List:        dispensador.lst
+    Debug/COFF:  dispensador.cof
+    Project:     dispensador.PJT
+    Call Tree:   dispensador.tre
+    Statistics:  dispensador.sta

@@ -1,3 +1,0 @@
->>> Warning 202 "dispensador.c" Line 22(8,11): Variable never used:   car
-      Memory usage:   ROM=28%      RAM=29% - 38%
-      0 Errors,  1 Warnings.
